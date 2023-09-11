@@ -1,0 +1,66 @@
+@baseUrl= http://localhost:3000
+@authToken = {{Authenticate.response.body.access_token}}
+
+
+### SEND NOTIFICATION MICRO SERVICE
+GET {{baseUrl}}/notification/send-notification
+
+### POST USERS
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name": "MAICON",
+    "email": "mkonline5@gmail.com",
+    "username": "mkonline5",
+    "password": "123456"
+}
+
+
+### POST LOGIN
+# @name Authenticate
+POST {{baseUrl}}/signin
+Content-Type: application/json
+
+{
+    "username": "mkonline2",
+    "password": "123456"
+}
+
+
+
+### POST TASK
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "title": "Estudar JavaScript",
+    "description": "Fazer o curso completo",
+    "startAt": "2023-09-11 11:34:00",
+    "endAt": "2023-09-11 11:34:00",
+    "priority": "BAIXA",
+    "status": "PENDENTE"    
+}
+
+
+### GET USER PROFILE
+# @name ProfileUser
+GET {{baseUrl}}/users/profile
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+
+
+
+### AVATAR
+PATCH {{baseUrl}}/users/avatar
+Authorization: Bearer {{authToken}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="avatar.png"
+Content-Type: image/png
+
+< ./public/avatar.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
