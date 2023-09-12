@@ -1,3 +1,4 @@
+#@baseUrl= http://localhost:3000
 @baseUrl= https://task-manager-dani-leao.onrender.com
 @authToken = {{Authenticate.response.body.access_token}}
 
@@ -9,8 +10,8 @@ Content-Type: application/json
 
 {
     "name": "MAICON",
-    "email": "mkonline@gmail.com",
-    "username": "mkonline",
+    "email": "mkonline5@gmail.com",
+    "username": "mkonline5",
     "password": "123456"
 }
 
