@@ -1,9 +1,7 @@
-@baseUrl= http://localhost:3000
+@baseUrl= https://task-manager-dani-leao.onrender.com
 @authToken = {{Authenticate.response.body.access_token}}
 
 
-### SEND NOTIFICATION MICRO SERVICE
-GET {{baseUrl}}/notification/send-notification
 
 ### POST USERS
 POST {{baseUrl}}/users
@@ -11,8 +9,8 @@ Content-Type: application/json
 
 {
     "name": "MAICON",
-    "email": "mkonline5@gmail.com",
-    "username": "mkonline5",
+    "email": "mkonline@gmail.com",
+    "username": "mkonline",
     "password": "123456"
 }
 
@@ -23,7 +21,7 @@ POST {{baseUrl}}/signin
 Content-Type: application/json
 
 {
-    "username": "mkonline2",
+    "username": "mkonline",
     "password": "123456"
 }
 
