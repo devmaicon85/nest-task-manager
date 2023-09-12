@@ -1,5 +1,5 @@
-#@baseUrl= http://localhost:3000
-@baseUrl= https://task-manager-dani-leao.onrender.com
+@baseUrl= http://localhost:3000
+#@baseUrl= https://task-manager-dani-leao.onrender.com
 @authToken = {{Authenticate.response.body.access_token}}
 
 
@@ -36,8 +36,8 @@ Authorization: Bearer {{authToken}}
 {
     "title": "Estudar JavaScript",
     "description": "Fazer o curso completo",
-    "startAt": "2023-09-11 11:34:00",
-    "endAt": "2023-09-11 11:34:00",
+    "startAt": "2023-09-12 11:34:00",
+    "endAt": "2023-09-12 11:34:00",
     "priority": "BAIXA",
     "status": "PENDENTE"    
 }
